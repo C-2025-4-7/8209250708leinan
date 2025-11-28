@@ -12,7 +12,7 @@ int main()
 	{
 	case '+':
 	{
-		c = a = +b;
+		c = a + b;
 		cout << c << endl;
 	}
 	break;
@@ -55,3 +55,4 @@ int main()
 	}
 	return 0;
 }
+
