@@ -6,7 +6,7 @@ int main()
 {
 	int a, b,c;
 	char fuhao;
-	cout << "ÇëÊäÈë¼ÆËãÊ½£¨Êý×Ö1	¼ÆËã·û	 Êý×Ö2£©" << endl;
+	cout << "è¯·è¾“å…¥è®¡ç®—å¼ï¼ˆæ•°å­—1	è®¡ç®—ç¬¦	 æ•°å­—2ï¼‰" << endl;
 	cin >> a >> fuhao >> b;
 	switch (fuhao)
 	{
@@ -15,16 +15,19 @@ int main()
 		c = a = +b;
 		cout << c << endl;
 	}
+	break;
 	case '-':
 	{
 		c = a - b;
 		cout << c << endl;
 	}
+	break;
 	case '*':
 	{
 		c = a * b;
 		cout << c << endl;
 	}
+	break;
 	case '/':
 	{
 		if (b != 0)
@@ -33,8 +36,9 @@ int main()
 			cout << c << endl;
 		}
 		else
-			cout<<"³ýÊý²»¸ÃÎªÁã" << endl;
+			cout<<"é™¤æ•°ä¸è¯¥ä¸ºé›¶" << endl;
 	}
+	break;
 	case '%':
 	{
 		if (b != 0)
@@ -43,10 +47,11 @@ int main()
 			cout << c << endl;
 		}
 		else
-			cout<<"³ýÊý²»¸ÃÎªÁã" << endl;
+			cout<<"é™¤æ•°ä¸è¯¥ä¸ºé›¶" << endl;
 	}
+	break;
 	default:
-		cout<<"¼ÆËã·û·Ç·¨" << endl;
+		cout<<"è®¡ç®—ç¬¦éžæ³•" << endl;
 	}
 	return 0;
 }
