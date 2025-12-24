@@ -1,23 +1,30 @@
 #include <iostream>
 using namespace std;
-int maxgys(int a, int b)
-{
-	int c;
-	for (int i = (a < b) ? a : b; (a % i != 0) || (b % i != 0); i--)
-		c=i-1;
-	return c;
-}
-int mingbs(int a, int b)
-{
-	int c;
-	for (int i = (a > b) ? a : b; ( i % a != 0) || ( i % b != 0); i++)
-		c = i+1;
-	return c;
-}
 int main()
 {
-	int m, n;
-	cin >> m >> n;
-	cout << maxgys(m, n) << '\t' << mingbs(m, n) << endl;
+	int a[10];
+	cout << "请输入十个数字：";
+	for (int i = 0; i < 10; i++)
+		cin >> a[i];
+	int b[10]={0}, count = 0;
+	for (int i = 0; i < 10; i++)
+	{
+		bool repeat = false;
+		for (int j = 0; j <= count; j++)
+		
+			if (a[i] == b[j])
+			{
+				repeat = true;
+				break;
+			}
+		if (!repeat)
+		{
+			b[count] = a[i];
+			count++;
+		}
+	}
+	cout << "不同的数字为：";
+	for (int i = 0; i < count; i++)
+		cout << b[i];
 	return 0;
 }
