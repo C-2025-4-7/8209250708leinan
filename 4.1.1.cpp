@@ -2,30 +2,29 @@
 using namespace std;
 int main()
 {
-	cout << "ÇëÊäÈë10¸öÊı×Ö£º" ;
 	int a[10];
+	cout << "è¯·è¾“å…¥åä¸ªæ•°å­—ï¼š";
 	for (int i = 0; i < 10; i++)
-	{
 		cin >> a[i];
-	}
-	int b[10] = {0};
-	cout << "Î´ÖØ¸´Êı×ÖÎª£º" ;
+	int b[10]={0}, count = 0;
 	for (int i = 0; i < 10; i++)
 	{
-		bool norepeat =true ;
-		for (int n = 0; n <= i; n++)
-		{
-			if (a[i] == b[n])
+		bool repeat = false;
+		for (int j = 0; j <= count; j++)
+		
+			if (a[i] == b[j])
 			{
-				norepeat = false;
+				repeat = true;
 				break;
 			}
-		}
-		if (norepeat)
+		if (!repeat)
 		{
-			b[i] = a[i];
-			cout << b[i] << '\t';
+			b[count] = a[i];
+			count++;
 		}
 	}
-	;
+	cout << "ä¸åŒçš„æ•°å­—ä¸ºï¼š";
+	for (int i = 0; i < count; i++)
+		cout << b[i];
+	return 0;
 }
